@@ -1,0 +1,99 @@
+.search-filter-card{
+    background:#fff;
+    padding:30px;
+    border-radius:22px;
+    margin-bottom:35px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 12px 30px rgba(15,23,42,.06);
+    transition:.35s;
+}
+
+.search-filter-card:hover{
+    box-shadow:0 18px 40px rgba(79,70,229,.08);
+}
+
+.filter-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    gap:18px;
+    margin-bottom:22px;
+}
+
+.input-group{
+     height:58px;
+    display:flex;
+    align-items:center;
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:0 15px;
+    transition:.3s;
+}
+
+.input-group:focus-within{
+    border-color:#4f46e5;
+    box-shadow:0 0 0 4px rgba(79,70,229,.08);
+    background:#fff;
+}
+
+.input-group span{
+    font-size:18px;
+    margin-right:10px;
+}
+
+.input-group input{
+    border:none;
+    outline:none;
+    background:transparent;
+    width:100%;
+    padding:0;
+    font-size:15px;
+}
+
+.filter-grid select{
+     height:58px;
+    padding:0 14px;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    background:#f8fafc;
+    font-size:15px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.filter-grid select:focus{
+    outline:none;
+    border-color:#4f46e5;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(79,70,229,.08);
+}
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
+.filter-buttons button{
+    min-width:140px;
+}
+
+@media(max-width:1100px){
+    .filter-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+    .filter-grid{
+        grid-template-columns:1fr;
+    }
+
+    .filter-buttons{
+        flex-direction:column;
+    }
+
+    .filter-buttons button{
+        width:100%;
+    }
+}

@@ -1,0 +1,320 @@
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    min-height: 100vh;
+    background: #f8fafc;
+    padding: 0 0 50px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0;
+    padding: 55px;
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #111827 0%,
+        #1f2937 45%,
+        #374151 100%
+    );
+
+    color: white;
+
+    border-left: 6px solid #4f46e5;
+
+    box-shadow:
+        0 20px 50px rgba(17,24,39,.28);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    right:-120px;
+    top:-150px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(79,70,229,.35),
+    transparent 70%);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    left:-120px;
+    bottom:-120px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(99,102,241,.20),
+    transparent 70%);
+}
+
+.hero h1{
+    position:relative;
+    z-index:2;
+    font-size:44px;
+    font-weight:700;
+    margin-bottom:15px;
+    line-height:1.2;
+}
+
+.hero p{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    color:rgba(255,255,255,.82);
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ================= STATS ================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+    transition:.35s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#4f46e5;
+
+    box-shadow:
+    0 20px 40px rgba(79,70,229,.12);
+}
+
+.stat-card h2{
+
+    color:#4f46e5;
+
+    font-size:36px;
+
+    margin-bottom:8px;
+}
+
+.stat-card p{
+
+    color:#64748b;
+
+    font-size:15px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-section{
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    border-top:5px solid #4f46e5;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+    margin-bottom:40px;
+}
+
+.search-row{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr auto;
+
+    gap:18px;
+}
+
+/* ================= ACTIONS ================= */
+
+.dashboard-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+}
+
+/* ================= JOB SECTION ================= */
+
+.jobs-section{
+
+    margin-top:20px;
+}
+
+.jobs-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:25px;
+}
+
+.jobs-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:25px;
+}
+
+/* ================= JOB CARD ================= */
+
+.jobs-grid .card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+    transition:.35s;
+}
+
+.jobs-grid .card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:0;
+
+    background:#4f46e5;
+
+    transition:.35s;
+}
+
+.jobs-grid .card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 25px 45px rgba(79,70,229,.14);
+
+    border-color:#4f46e5;
+}
+
+.jobs-grid .card:hover::before{
+
+    height:100%;
+}
+
+.jobs-grid h3{
+
+    color:#111827;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.jobs-grid p{
+
+    color:#64748b;
+
+    line-height:1.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.search-row{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:35px 28px;
+
+border-radius:18px;
+
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.dashboard-actions{
+
+justify-content:center;
+
+}
+
+.jobs-title{
+
+font-size:24px;
+
+}
+
+.jobs-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

@@ -1,0 +1,10 @@
+Looking for Python Developer.
+
+Skills Required:
+Python
+FastAPI
+MongoDB
+React
+JWT
+REST API
+Git
